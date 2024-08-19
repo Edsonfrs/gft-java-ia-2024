@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create # Atualiza automaticamente o esquema do banco de dados, conforme necessário. Pode ser alterado para "validate", "create", "create-drop", etc., conforme suas necessidades.
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true # Mostra as consultas SQL geradas no console (útil para depuração)
+    properties:
+      hibernate:
+        format_sql: true # Formata a saída do SQL no console para melhor legibilidade
